@@ -13,13 +13,13 @@ def num_words(file_contents):
 
 def num_char(file_contents):
     dict_char = {}
-    for words in file_contents:
-        for word in words:
-            if word in dict_char:
-                dict_char[word.lower()] += 1
-            else: 
-                dict_char[word.lower()] = 1
-    print(dict_char)  
-    return dict_char      
+    for char in file_contents.lower():
+        if char in dict_char:
+            dict_char[char] += 1
+        else: 
+            dict_char[char] = 1
+    print(dict_char)
+    return dict_char
+    
 
 main()
